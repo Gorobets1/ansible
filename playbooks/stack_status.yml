@@ -53,7 +53,7 @@
        uri:
           url: http://{{item}} 
           return_content: yes
-       with_items: webserver 
+       loop: "{{groups['webserver']}}" 
        register: app_index 
       
      - fail: 
