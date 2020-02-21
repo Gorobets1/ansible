@@ -22,7 +22,7 @@
         src: demo/demo.conf
         dest: /etc/apache2/sites-available
         mode: 0755
-    notify: restart apache2
+   notify: restart apache2
 
  - name: setup python virtualenv
    pip:
