@@ -1,11 +1,11 @@
 ---
 # tasks file for demo_app
  - name: install apache2
-      apt:
+   apt:
          name: "{{item}}"
          state: present
          update_cache: yes
-      with_items:
+   with_items:
         - python-pip
         - python-virtualenv
         - python-mysqldb
