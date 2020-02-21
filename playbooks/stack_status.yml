@@ -29,7 +29,8 @@
        command: service mysql status 
     
      - name: verify mysql is listening on 3306 
-       wait_for: 
+       wait_for:
+              hostname: {{ ansible_eth0.ipv4.address }}
               port: 3306
               timeout: 1
   
